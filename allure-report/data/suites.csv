@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","13206","Login with username=Admin2 => failed","chromium","2026-03-19","passed","2026-03-19","Login tests > Login test with data provider","login.spec.ts","",""
+"","13385","Login with username=Admin => failed","chromium","2026-03-19","passed","2026-03-19","Login tests > Login test with data provider","login.spec.ts","",""
+"","10015","Login with username=Admin => sucess","chromium","2026-03-19","passed","2026-03-19","Login tests > Login test with data provider","login.spec.ts","",""
+"","9343","Test login thành công","chromium","2026-03-19","passed","2026-03-19","Login tests","login.spec.ts","",""
+"","13077","Login with username=Admin1 => failed","chromium","2026-03-19","passed","2026-03-19","Login tests > Login test with data provider","login.spec.ts","",""

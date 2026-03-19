@@ -1,0 +1,5 @@
+username,password,expected
+Admin,admin123,sucess
+Admin1,admin123,failed
+Admin,admin12,failed
+Admin2,Admin21,failed
