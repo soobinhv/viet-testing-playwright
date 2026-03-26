@@ -34,6 +34,10 @@ jobs:
       # B4: tải browser (chromium) để chạy test
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
+      - name: create .env file
+        run: |
+          echo "USERNAME=${{secrets.USERNAME}}" >> .env
+          echo "PASSWORD=${{secrets.PASSWORD}}" >> .env
 
       # B5: chạy test bằng Playwright
       - name: Run Playwright tests
