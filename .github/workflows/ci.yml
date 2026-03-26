@@ -43,3 +43,24 @@ jobs:
       # B5: chạy test bằng Playwright
       - name: Run Playwright tests
         run: npx playwright test --project=chromium
+      
+      - name: Generate Allure report
+        if: always()
+        run: |
+          if [ -d "allure-results"]; then
+            npm run -s allure:generate || true
+          else
+            echo "No allure-results folder found, skipping report generation."
+          fi
+
+      - name: Upload Allure report
+        if: always()
+        uses: action/upload-artifact@v4
+        with:
+          name: Playwright-allure-report
+          if-no-files-found: warning
+          path: |
+            playwright-report/
+            allure-report/
+            allure-results/
+            test-results/
