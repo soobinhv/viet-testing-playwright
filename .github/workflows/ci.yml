@@ -55,7 +55,7 @@ jobs:
 
       - name: Upload Allure report
         if: always()
-        uses: action/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: Playwright-allure-report
           if-no-files-found: warning
