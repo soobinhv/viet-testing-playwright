@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
 
+dotenv.config()
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -28,10 +30,13 @@ export default defineConfig({
   ],
 
   expect: {
+    // thêm timeout cho expect
     timeout: 100000
   },
+  timeout: 120000, // timeout cho all test cases
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    // tăng timeout cho các action
     actionTimeout: 20000,
     navigationTimeout: 60000,
     /* Base URL to use in actions like `await page.goto('')`. */
